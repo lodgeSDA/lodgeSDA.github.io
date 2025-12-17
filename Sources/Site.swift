@@ -17,13 +17,13 @@ struct IgniteWebsite {
 struct LodgeSDA: Site {
     var name = "LodgeSDA"
     var titleSuffix = " – Home"
-    var url = URL(static: "https://lodgesda.co.uk")
+    var url = URL(static: "https://lodgesda.github.io")
     var builtInIconsEnabled = true
 
     var lightTheme: (any Theme)? = AutomataNight()
     var darkTheme: (any Theme)? = AutomataNight()
     var author = "Maurice Elliott"
-    var favicon: URL? { URL(static: "/favicon/logo.png") }
+    var favicon: URL? { URL(static: "/images/logo.png") }
 
     var homePage = Home()
     var layout = MainLayout()
