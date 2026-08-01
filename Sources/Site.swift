@@ -15,7 +15,7 @@ struct IgniteWebsite {
 }
 
 struct LodgeSDA: Site {
-    var name = "LodgeSDA"
+    var name = "Lodge Causeway SDA Church"
     var titleSuffix = " – Home"
     var url = URL(static: "https://lodgesda.church")
     var builtInIconsEnabled = true

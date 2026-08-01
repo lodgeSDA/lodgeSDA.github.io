@@ -28,10 +28,11 @@ struct Contact: StaticPage {
                         .font(.title4)
                         .fontWeight(.semibold)
 
-                    // TODO: Replace with actual church address
-                    Text("Lodge Causeway")
+                    Text("Lodge Causeway SDA Church")
                         .font(.body)
-                    Text("Bristol, BS16 3RD")
+                    Text("4 Worcester Close")
+                        .font(.body)
+                    Text("Bristol, BS16 3PW")
                         .font(.body)
                     Text("United Kingdom")
                         .font(.body)
@@ -52,13 +53,14 @@ struct Contact: StaticPage {
                         .font(.title4)
                         .fontWeight(.semibold)
 
-                    // TODO: Replace with actual email
-                    Link("info@lodgesda.church", target: "mailto:info@lodgesda.church")
+                    Link("lodgecausewaysda@gmail.com", target: "mailto:lodgecausewaysda@gmail.com")
                         .font(.body)
                         .margin(.bottom, 5)
 
-                    // TODO: Replace with actual phone number
-                    Text("Phone: 0117 000 0000")
+                    Text("Pastor Robis: 07894226793")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                    Text("Elder Des Mills: 07795 445 833")
                         .font(.body)
                         .foregroundStyle(.secondary)
                 }
@@ -77,16 +79,14 @@ struct Contact: StaticPage {
                         .font(.title4)
                         .fontWeight(.semibold)
 
-                    // TODO: Replace with actual Facebook URL
-                    Link(target: "https://www.facebook.com/YOUR_PAGE") {
+                    Link(target: "https://www.facebook.com/lodgecausewaysda") {
                         Image(systemName: "facebook", description: "Facebook")
                         " Facebook"
                     }
                     .font(.body)
                     .margin(.bottom, 5)
 
-                    // TODO: Replace with actual Instagram URL
-                    Link(target: "https://www.instagram.com/YOUR_PAGE") {
+                    Link(target: "https://www.instagram.com/lodgecausewaysda") {
                         Image(systemName: "instagram", description: "Instagram")
                         " Instagram"
                     }
@@ -106,7 +106,7 @@ struct Contact: StaticPage {
                 .horizontalAlignment(.center)
                 .margin(.top, 20)
 
-            // TODO: Update the map embed URL in Includes/google-map.html with your actual Google Maps embed
+
             Include("google-map.html")
         }
         .margin(.top, 100)

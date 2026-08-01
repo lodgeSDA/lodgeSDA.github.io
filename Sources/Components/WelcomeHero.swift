@@ -8,7 +8,7 @@ struct WelcomeHero: HTML {
                 .resizable()
                 .frame(width: 200)
 
-            Text("Welcome to Lodge SDA Church")
+            Text("Welcome to Lodge Causeway Seventh-day Adventist Church")
                 .font(.title1)
                 .fontWeight(.semibold)
                 .margin(.top, 20)

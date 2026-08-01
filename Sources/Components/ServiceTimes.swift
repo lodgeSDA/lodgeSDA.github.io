@@ -14,35 +14,37 @@ struct ServiceTimes: HTML {
                 Row {
                     Column { Text("Sabbath School") }
                     Column { Text("Saturdays") }
-                    Column { Text("9:45 AM") }
+                    Column { Text("10:00 AM") }
                 }
                 Row {
                     Column { Text("Divine Service") }
                     Column { Text("Saturdays") }
-                    Column { Text("11:00 AM") }
+                    Column { Text("11:15 AM") }
                 }
                 Row {
-                    // TODO: Replace with actual Zoom link
-                    Column { Text("Monday Devotional (Zoom)") }
+                    Column { Text("Devotional Gathering (Zoom)") }
                     Column { Text("Mondays") }
-                    Column { Text("7:00 PM") }
+                    Column { Text("6:00 AM") }
                 }
                 Row {
-                    // TODO: Replace with actual Zoom link
-                    Column { Text("Thursday Devotional (Zoom)") }
+                    Column { Text("Devotional Gathering (Zoom)") }
                     Column { Text("Thursdays") }
-                    Column { Text("7:00 PM") }
+                    Column { Text("6:00 AM") }
                 }
             }
             .tableStyle(.stripedRows)
 
+            Link("Join Devotional Gathering on Zoom", target: "https://us02web.zoom.us/j/9778788528?pwd=enB6amRxUmVwQTdma1p2c3hEUkJtUT09")
+                .linkStyle(.button)
+                .margin(.top, 15)
+
             Text {
-                Emphasis("All are welcome to join us. Contact us for Zoom meeting details.")
+                "Meeting ID: 977 878 8528 | Passcode: 6vNzNg"
             }
             .font(.body)
             .foregroundStyle(.secondary)
             .horizontalAlignment(.center)
-            .margin(.top, 15)
+            .margin(.top, 5)
         }
         .class("shadow-sm")
         .margin(.top, 20)

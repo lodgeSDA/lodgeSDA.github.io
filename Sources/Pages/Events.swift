@@ -16,7 +16,6 @@ struct Events: StaticPage {
                 .horizontalAlignment(.center)
                 .margin(.bottom, 30)
 
-            // TODO: Replace the calendar ID in Includes/google-calendar.html with your actual Google Calendar ID
             Include("google-calendar.html")
 
             Divider()

@@ -13,8 +13,7 @@ struct MainFooter: HTML {
         .font(.body)
         .fontWeight(.light)
 
-      // TODO: Replace with actual church address
-      Text("Lodge Causeway, Bristol, BS16 3RD")
+      Text("4 Worcester Close, Bristol, BS16 3PW")
         .horizontalAlignment(.center)
         .font(.body)
         .fontWeight(.ultraLight)
@@ -22,12 +21,10 @@ struct MainFooter: HTML {
         .margin(.bottom, 15)
 
       Section {
-        // TODO: Replace with actual Facebook page URL
-        Link(Image(systemName: "facebook", description: "Facebook"), target: "https://www.facebook.com/YOUR_PAGE")
+        Link(Image(systemName: "facebook", description: "Facebook"), target: "https://www.facebook.com/lodgecausewaysda")
           .margin(.horizontal, 10)
 
-        // TODO: Replace with actual Instagram page URL
-        Link(Image(systemName: "instagram", description: "Instagram"), target: "https://www.instagram.com/YOUR_PAGE")
+        Link(Image(systemName: "instagram", description: "Instagram"), target: "https://www.instagram.com/lodgecausewaysda")
           .margin(.horizontal, 10)
       }
       .horizontalAlignment(.center)

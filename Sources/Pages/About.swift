@@ -12,7 +12,7 @@ struct About: StaticPage {
                 .fontWeight(.semibold)
                 .margin(.top, 20)
 
-            Text("As Seventh-day Adventists, our mission drives everything we do. Rooted in Christ\u{2019}s love and the teachings of the Bible, we are committed to serving others, transforming lives, and building communities of hope. Through education, humanitarian work, health initiatives, and spiritual guidance, we aim to inspire faith and create lasting impact in the lives we touch\u{2014}both locally and globally.")
+            Text("Our mission is to be a Christ-centred, welcoming community where people of every race, background, and generation can encounter God\u{2019}s love, grow in faith, and serve our neighbourhood with compassion. We exist to share hope, build genuine relationships, and create a place where everyone belongs. Through worship, teaching, and practical care, we seek to make a lasting difference in our community and beyond.")
                 .font(.body)
                 .horizontalAlignment(.center)
                 .margin(.bottom, 30)
@@ -22,7 +22,7 @@ struct About: StaticPage {
                 .font(.title1)
                 .fontWeight(.semibold)
 
-            Text("To be a vibrant, Christ-centred community that reflects God\u{2019}s love to every person in Bristol and beyond. We envision a church where lives are transformed by the gospel, families are strengthened, and every member is equipped to serve and share the hope found in Jesus Christ.")
+            Text("To be a vibrant, Christ-centred community that reflects God\u{2019}s love to every person in Bristol and beyond \u{2014} a church where lives are transformed by the gospel, families are strengthened, and every member is equipped to serve and share the hope found in Jesus Christ.")
                 .font(.body)
                 .horizontalAlignment(.center)
                 .margin(.bottom, 30)
@@ -32,8 +32,7 @@ struct About: StaticPage {
                 .font(.title1)
                 .fontWeight(.semibold)
 
-            // TODO: Replace with actual church history
-            Text("The Lodge Causeway Seventh-day Adventist Church has been a part of the Bristol community for many years. From humble beginnings, our congregation has grown into a diverse and welcoming family united by faith. Over the decades, we have been committed to worship, community outreach, and sharing the everlasting gospel. Our church continues to evolve while holding firm to the timeless truths of Scripture.")
+            Text("For over seventy years, Lodge Causeway Seventh-day Adventist Church has stood at the heart of our community as a welcoming home for people of every race, background, and story. We\u{2019}re a vibrant, friendly congregation, meeting on the Sabbath (Saturday) where everyone is truly valued, and newcomers are embraced like family. Our services blend heartfelt worship, practical teaching, and genuine connection, creating a space where faith can grow and lives can flourish. Whether you\u{2019}re exploring church for the first time or looking for a fresh start, you\u{2019}ll find warmth, openness, and a place to belong.")
                 .font(.body)
                 .horizontalAlignment(.center)
                 .margin(.bottom, 40)
@@ -48,13 +47,39 @@ struct About: StaticPage {
                 .margin(.bottom, 20)
 
             Grid {
-                // TODO: Replace names and roles with actual leadership details
                 leaderCard(image: "/images/pastor.jpg", name: "Pastor Robis da Silva", role: "Pastor")
-                leaderCard(image: "/images/des.jpg", name: "Des", role: "Elder")
-                leaderCard(image: "/images/allan.jpg", name: "Allan", role: "Elder")
-                leaderCard(image: "/images/ruth.jpg", name: "Ruth", role: "Elder")
+                leaderCard(image: "/images/des.jpg", name: "Des Mills", role: "Elder")
+                leaderCard(image: "/images/ruth.jpg", name: "Ruth Ohman", role: "Elder")
             }
-            .columns(4)
+            .columns(3)
+            .margin(.bottom, 30)
+
+            Text("Additional Leaders")
+                .font(.title3)
+                .fontWeight(.semibold)
+                .margin(.bottom, 15)
+
+            Grid {
+                leaderListColumn(entries: [
+                    ("James Mureru", "Elder"),
+                    ("Tongai Zhou", "Elder"),
+                    ("Des Mills", "Treasurer"),
+                    ("Richard Timmerman", "Clerk"),
+                    ("Charlou Medes", "Head Deacon"),
+                    ("Leonora De San Jose", "Head Deaconess"),
+                    ("Hilda Medes", "Sabbath School")
+                ])
+                leaderListColumn(entries: [
+                    ("Isaac Israel", "Personal Ministry"),
+                    ("Kellys Sikabbwele", "Youth Leader"),
+                    ("Patience Mureru", "Children/Pathfinder"),
+                    ("Ingrid Wellman", "Health & Women\u{2019}s Ministry"),
+                    ("Rachel Ohman", "Safeguarding & Music Ministry"),
+                    ("Stephanie Anderson", "Music Ministry"),
+                    ("Jacob Jayaraj", "Men\u{2019}s Ministry")
+                ])
+            }
+            .columns(2)
             .margin(.bottom, 40)
 
             Divider()
@@ -96,5 +121,18 @@ struct About: StaticPage {
         .horizontalAlignment(.center)
         .class("shadow-sm")
         .padding(15)
+    }
+
+    private func leaderListColumn(entries: [(String, String)]) -> some HTML {
+        List {
+            for entry in entries {
+                Text {
+                    Strong(entry.0)
+                    " \u{2014} \(entry.1)"
+                }
+                .font(.body)
+            }
+        }
+        .listStyle(.plain)
     }
 }
