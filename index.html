@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Maurice Elliott" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title> – Home</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://lodgesda.church/" rel="canonical" />
+    <link href="/images/logo.png" rel="icon" />
+    <meta property="og:site_name" content="Lodge Causeway SDA Church" />
+    <meta property="og:title" content="" />
+    <meta name="twitter:title" content="" />
+    <meta property="og:url" content="https://lodgesda.church/" />
+    <meta name="twitter:domain" content="lodgesda.church" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(242 191 177 / 100%)" data-bs-theme="light">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand"><img src="/images/logo.png" alt="The Seventh Day Adventist Logo for Lodge Causeway Church." class="img-fluid" style="width: 250px" /></a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/about" class="nav-link text-nowrap">About</a></li>
+              <li class="nav-item"><a href="/contact" class="nav-link text-nowrap">Contact</a></li>
+              <li class="nav-item"><a href="/events" class="nav-link text-nowrap">Events</a></li>
+              <li class="nav-item"><a href="/media" class="nav-link text-nowrap">Media</a></li>
+              <li class="nav-item"><a href="/ministries" class="nav-link text-nowrap">Ministries</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div class="text-center" style="margin-top: 100px; margin-bottom: 40px">
+        <img src="/images/logo.png" alt="Lodge Causeway Seventh-day Adventist Church Logo" class="img-fluid" style="width: 200px" />
+        <h1 style="font-weight: 600; margin-top: 20px">Welcome to Lodge Causeway Seventh-day Adventist Church</h1>
+        <h3 class="text-body-secondary">Bristol Lodge Causeway</h3>
+        <p style="margin-top: 20px">We are a warm and welcoming Seventh-day Adventist community in Bristol. Whether you're looking for a church home or just visiting, you are always welcome here.</p>
+      </div>
+      <div class="shadow-sm card" style="margin-top: 20px; margin-bottom: 20px">
+        <div class="card-body">
+          <h3 class="text-center card-title" style="font-weight: 600; margin-bottom: 20px">Regular Services</h3>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td colspan="1"><p>Sabbath School</p></td>
+                <td colspan="1"><p>Saturdays</p></td>
+                <td colspan="1"><p>10:00 AM</p></td>
+              </tr>
+              <tr>
+                <td colspan="1"><p>Divine Service</p></td>
+                <td colspan="1"><p>Saturdays</p></td>
+                <td colspan="1"><p>11:15 AM</p></td>
+              </tr>
+              <tr>
+                <td colspan="1"><p>Devotional Gathering (Zoom)</p></td>
+                <td colspan="1"><p>Mondays</p></td>
+                <td colspan="1"><p>6:00 AM</p></td>
+              </tr>
+              <tr>
+                <td colspan="1"><p>Devotional Gathering (Zoom)</p></td>
+                <td colspan="1"><p>Thursdays</p></td>
+                <td colspan="1"><p>6:00 AM</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="https://us02web.zoom.us/j/9778788528?pwd=enB6amRxUmVwQTdma1p2c3hEUkJtUT09" class="btn btn-primary" style="margin-top: 15px">Join Devotional Gathering on Zoom</a>
+          <p class="text-body-secondary text-center card-text" style="margin-top: 5px">Meeting ID: 977 878 8528 | Passcode: 6vNzNg</p>
+        </div>
+      </div>
+      <div id="sabbath-sunset-widget"> 
+        <div class="sunset-loading">
+          Loading Sabbath times...
+        </div> 
+      </div> 
+      <style>
+#sabbath-sunset-widget {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.sunset-loading {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.sunset-content h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.sunset-times {
+  line-height: 1.8;
+}
+
+.sunset-day {
+  margin: 0.25rem 0;
+}
+
+.sunset-day .time {
+  font-weight: 700;
+}
+
+.sunset-error {
+  font-style: italic;
+  opacity: 0.7;
+}
+</style> 
+      <script>
+(function() {
+  const LAT = 51.454514;
+  const LNG = -2.587910;
+  
+  function formatDate(date) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  }
+  
+  function formatTime(timeStr) {
+    // API returns time in format "7:42:26 PM" in UTC
+    // We need to convert to local time
+    const [time, period] = timeStr.split(' ');
+    const [hours, minutes] = time.split(':');
+    return `${hours}:${minutes} ${period}`;
+  }
+  
+  function getNextFriday() {
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = Sunday, 5 = Friday, 6 = Saturday
+    
+    let daysUntilFriday;
+    
+    if (dayOfWeek === 0) { // Sunday
+      daysUntilFriday = 5;
+    } else if (dayOfWeek === 6) { // Saturday
+      daysUntilFriday = -1; // Yesterday was Friday
+    } else if (dayOfWeek === 5) { // Friday
+      daysUntilFriday = 0; // Today
+    } else { // Monday-Thursday
+      daysUntilFriday = 5 - dayOfWeek;
+    }
+    
+    const friday = new Date(now);
+    friday.setDate(now.getDate() + daysUntilFriday);
+    return friday;
+  }
+  
+  function dateToAPIFormat(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+  
+  async function fetchSunset(date) {
+    const dateStr = dateToAPIFormat(date);
+    const url = `https://api.sunrise-sunset.org/json?lat=${LAT}&lng=${LNG}&date=${dateStr}&formatted=0`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data.status !== 'OK') {
+      throw new Error('API returned error status');
+    }
+    
+    // Parse the sunset time (comes in ISO format)
+    const sunsetUTC = new Date(data.results.sunset);
+    
+    // Format to local time
+    const hours = sunsetUTC.getHours();
+    const minutes = String(sunsetUTC.getMinutes()).padStart(2, '0');
+    const period = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours > 12 ? hours - 12 : (hours === 0 ? 12 : hours);
+    
+    return `${displayHours}:${minutes} ${period}`;
+  }
+  
+  function formatDateWithSuffix(date) {
+    const day = date.getDate();
+    const suffix = ['th', 'st', 'nd', 'rd'];
+    const v = day % 100;
+    const suffixIndex = (v - 20) % 10 || v;
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[date.getMonth()]} ${day}${suffix[suffixIndex] || suffix[0]}`;
+  }
+  
+  async function loadSunsetTimes() {
+    try {
+      const friday = getNextFriday();
+      const saturday = new Date(friday);
+      saturday.setDate(friday.getDate() + 1);
+      
+      const [fridaySunset, saturdaySunset] = await Promise.all([
+        fetchSunset(friday),
+        fetchSunset(saturday)
+      ]);
+      
+      const widget = document.getElementById('sabbath-sunset-widget');
+      widget.innerHTML = `
+        <div class="sunset-content">
+          <h4>Sabbath Sunset:</h4>
+          <div class="sunset-times">
+            <div class="sunset-day">Friday ${formatDateWithSuffix(friday)} <span class="time">${fridaySunset}</span></div>
+            <div class="sunset-day">Saturday ${formatDateWithSuffix(saturday)} <span class="time">${saturdaySunset}</span></div>
+          </div>
+        </div>
+      `;
+    } catch (error) {
+      console.error('Error fetching sunset times:', error);
+      const widget = document.getElementById('sabbath-sunset-widget');
+      widget.innerHTML = `
+        <div class="sunset-error">
+          Unable to load sunset times.
+        </div>
+      `;
+    }
+  }
+  
+  // Load when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadSunsetTimes);
+  } else {
+    loadSunsetTimes();
+  }
+})();
+</script> 
+      <div style="margin-top: 80px">
+        <p class="text-center" style="margin-top: 80px; margin-bottom: 80px"><br /><em>A Message from our Pastor:<br /></em><br />Wherever you are in life right now full of faith, full of questions, or somewhere in between we want you to know something simple and life changing:<br /><br />You are deeply loved by <strong>God.</strong><br /><br />The heart of the Christian message is not religion, rules, or rituals. It is a relationship with <strong>Jesus Christ</strong> – the One who came so that we might have life, forgiveness, freedom, and lasting hope.<br /><br />Perhaps you've been searching for purpose.<br />Perhaps you've been carrying guilt or regret.<br />Perhaps you feel far from <strong>God.</strong><br /><br />The good news is this: you are not beyond His reach.<br /><br /><strong>Jesus</strong> meets us right where we are. He brings peace to anxious hearts, healing to broken places, and light into the darkest moments. His grace is not earned – it is received. His invitation is open to everyone.<br /><br />No matter your background, your past, or your doubts, there is a place for you here. Our church is a community of imperfect people discovering the transforming love of a perfect Saviour. We would be honoured to walk with you as you explore faith, ask questions, and encounter <strong>God</strong> for yourself.<br /><br />If you've never taken the step to trust <strong>Christ,</strong> you can begin today. Simply open your heart to Him in prayer. Ask Him to forgive you, to lead you, and to make you new. He promises that those who seek Him will find Him.<br /><br />We invite you to join us – in worship, in fellowship, and in discovering the hope that changes everything.<br /><br />You are welcome.<br />You are wanted.<br />You are invited.<br /><br />With hope and expectation,<br />Pastor Robis da Silva</p>
+      </div>
+      <div class="shadow-sm card">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: 600; margin-bottom: 15px">Verse of the Day</h5>
+          <blockquote class="blockquote">
+            <p style="margin-bottom: 15px">"I keep my eyes always on the Lord. With him at my right hand, I will not be shaken."</p>
+            <p class="text-end"><em>Psalm 16:8</em> <span class="text-body-secondary">(NIV)</span></p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 80px; margin-bottom: 40px">
+      <hr style="margin-bottom: 30px" />
+      <p class="text-center" style="font-weight: 300">Lodge Causeway SDA Church — Bristol, UK</p>
+      <p class="text-center text-body-secondary" style="font-weight: 100; margin-bottom: 15px">4 Worcester Close, Bristol, BS16 3PW</p>
+      <div class="text-center" style="margin-bottom: 15px">
+        <a href="https://www.facebook.com/lodgecausewaysda" style="margin-left: 10px; margin-right: 10px"><i class="bi-facebook"></i></a>
+        <a href="https://www.instagram.com/lodgecausewaysda" style="margin-left: 10px; margin-right: 10px"><i class="bi-instagram"></i></a>
+      </div>
+      <a href="https://sec.adventist.uk/" class="text-center" style="display: block; font-weight: 100; text-decoration: none">South England Conference</a>
+      <a href="https://www.github.com/lodgeSDA/LodgeSDA.church" class="text-center" style="display: block; font-weight: 100; text-decoration: none">Github</a>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
